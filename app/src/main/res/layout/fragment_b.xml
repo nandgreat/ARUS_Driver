@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dot_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_heavy_dot" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView13"
+                    app:layout_constraintStart_toEndOf="@+id/imageView11"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_heavy_dot" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView12"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_light_dot" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/dataCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dot_layout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:hint="Pick a Location from the Map"
+                        app:boxStrokeColor="@color/colorPrimary"
+                        app:boxStrokeWidth="2dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pickLocationLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:textColor="@color/colorPrimary" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--            <TextView-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_marginTop="10dp"-->
+                    <!--                android:layout_marginEnd="16dp"-->
+                    <!--                android:text="Select Payment Method"-->
+                    <!--                android:textAlignment="center"-->
+                    <!--                android:textColor="@color/colorAccent"-->
+                    <!--                android:textSize="14sp" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:hint="Payment Method"
+                        app:boxStrokeColor="@color/colorPrimary"
+                        app:boxStrokeWidth="2dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/paymentMethodLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:focusable="false"
+                            android:textColor="@color/colorPrimary" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/bPrevious"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/full_button_bg_accent"
+                            android:text="Previous"
+                            android:padding="10dp"
+                            android:drawableStart="@drawable/ic_arrow_back_black_24dp"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/white"
+                            android:layout_marginEnd="10dp"
+                            app:layout_constraintEnd_toEndOf="@+id/gasAmountLayout"
+                            app:layout_constraintStart_toStartOf="@+id/gasAmountLayout"
+                            app:layout_constraintTop_toBottomOf="@+id/gasAmountLayout" />
+
+                        <Button
+                            android:id="@+id/bProceed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/full_button_bg"
+                            android:text="Next"
+                            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+                            android:padding="10dp"
+                            android:drawableTint="@android:color/white"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintEnd_toEndOf="@+id/gasAmountLayout"
+                            app:layout_constraintStart_toStartOf="@+id/gasAmountLayout"
+                            app:layout_constraintTop_toBottomOf="@+id/gasAmountLayout" />
+
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/progress"-->
+<!--                        android:layout_width="250dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="54dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:background="@drawable/profile_button_bg"-->
+<!--                        android:padding="16sp"-->
+<!--                        app:layout_constraintHorizontal_bias="0.464"-->
+<!--                        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                        app:layout_constraintRight_toRightOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutArea">-->
+
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:paddingStart="16sp"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:paddingEnd="16sp"-->
+<!--                            android:text="Continue"-->
+<!--                            android:textColor="@android:color/white"-->
+<!--                            android:textSize="18sp"-->
+<!--                            app:fontFamily="@font/manropemedium" />-->
+<!--                    </LinearLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="32dp"-->
+    <!--android:orientation="horizontal"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/label">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivActivePoor"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:srcCompat="@drawable/poort"-->
+    <!--tools:layout_editor_absoluteY="278dp" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivInactivePoor"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:srcCompat="@drawable/inactive_poor"-->
+    <!--tools:layout_editor_absoluteY="278dp" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/ivActivePoor"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:text="Poor"-->
+    <!--android:textSize="16dp"-->
+    <!--android:textStyle="bold" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivActiveFair"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:srcCompat="@drawable/fair"-->
+    <!--tools:layout_editor_absoluteY="278dp" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivInactiveFair"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:srcCompat="@drawable/inactive_fair"-->
+    <!--tools:layout_editor_absoluteY="278dp" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_below="@id/ivActiveFair"-->
+    <!--android:text="Fair"-->
+    <!--android:textSize="16dp"-->
+    <!--android:textStyle="bold" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivActiveGood"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:srcCompat="@drawable/good"-->
+    <!--tools:layout_editor_absoluteY="278dp" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivInactiveGood"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:srcCompat="@drawable/inactive_good"-->
+    <!--tools:layout_editor_absoluteY="278dp" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_below="@id/ivActiveGood"-->
+    <!--android:text="Good"-->
+    <!--android:textSize="16dp"-->
+    <!--android:textStyle="bold" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivActiveExcellent"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:srcCompat="@drawable/excellent"-->
+    <!--tools:layout_editor_absoluteY="278dp" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivInactiveExcellent"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:srcCompat="@drawable/inactive_excellent"-->
+    <!--tools:layout_editor_absoluteY="278dp" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_below="@id/ivActiveExcellent"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:text="Excellent"-->
+    <!--android:textSize="16dp"-->
+    <!--android:textStyle="bold" />-->
+    <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

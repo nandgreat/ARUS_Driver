@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragmentA"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.silexsecure.arusdriver.cartowing.CarTowingDetails"
+        android:label="Vehicle Detail"
+        tools:layout="@layout/fragment_car_towing_details">
+        <action
+            android:id="@+id/fragmentAtoB"
+            app:destination="@id/fragmentB"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.silexsecure.arusdriver.cartowing.TowingSummaryFragment"
+        android:label="Fragment D"
+        tools:layout="@layout/fragment_towing_summary"/>
+
+</navigation>

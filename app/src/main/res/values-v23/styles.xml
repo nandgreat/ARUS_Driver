@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DialogTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="android:titleTextColor">#555555</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:radioButtonStyle">@color/colorAccent</item>
+
+
+    </style>
+
+
+
+
+</resources>

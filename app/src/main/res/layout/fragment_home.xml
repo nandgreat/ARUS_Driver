@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F7"
+    android:orientation="vertical"
+    tools:context=".navfragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:background="@color/colorPrimary"
+                android:foreground="@drawable/bg_pattern"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvGreetings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Good Morning, Joel"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivNoDelivery"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/no_delivery"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <TextView
+                    android:id="@+id/tvStatement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="No Gas Order to Deliver"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ivNoDelivery"
+                    app:layout_constraintStart_toStartOf="@+id/ivNoDelivery"
+                    app:layout_constraintTop_toBottomOf="@+id/ivNoDelivery" />
+
+                <TextView
+                    android:id="@+id/tvCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textColor="#ffffff"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toTopOf="@+id/tvStatement"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You have"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@+id/tvGreetings"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGreetings" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tvDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOWING APP"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriver"
+                app:layout_constraintVertical_bias="0.110000014">
+
+
+                <ImageView
+                    android:id="@+id/ivTowingVan"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/circle_bg"
+                    android:elevation="10dp"
+                    android:padding="15dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/gasCard"
+                    app:layout_constraintStart_toStartOf="@+id/gasCard"
+                    app:layout_constraintTop_toTopOf="@+id/guideline"
+                    app:srcCompat="@drawable/towing_van" />
+
+                <ImageView
+                    android:id="@+id/ivCarRepair"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/circle_bg"
+                    android:elevation="10dp"
+                    android:padding="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/dieselCard"
+                    app:layout_constraintStart_toStartOf="@+id/dieselCard"
+                    app:layout_constraintTop_toTopOf="@+id/guideline2"
+                    app:srcCompat="@drawable/ic_car_repair" />
+
+                <ImageView
+                    android:id="@+id/ivCarParts"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/circle_bg"
+                    android:elevation="10dp"
+                    android:padding="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/carRepairCard"
+                    app:layout_constraintStart_toStartOf="@+id/carRepairCard"
+                    app:layout_constraintTop_toTopOf="@+id/guideline2"
+                    app:srcCompat="@drawable/ic_shop" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fuelCard"
+                    android:layout_width="150dp"
+                    android:layout_height="170dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/gasCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivGas"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:padding="15dp"
+                            app:layout_constraintEnd_toEndOf="@+id/gasCard"
+                            app:layout_constraintStart_toStartOf="@+id/gasCard"
+                            app:layout_constraintTop_toTopOf="@+id/guideline"
+                            app:srcCompat="@drawable/ic_gas" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Order History"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/gasCard"
+                    android:layout_width="150dp"
+                    android:layout_height="170dp"
+                    android:layout_marginEnd="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fuelCard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.504"
+                    app:layout_constraintStart_toEndOf="@+id/fuelCard"
+                    app:layout_constraintTop_toTopOf="@+id/fuelCard">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivProfile"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:padding="15dp"
+                            app:tint="@color/colorAccent"
+                            app:layout_constraintEnd_toEndOf="@+id/gasCard"
+                            app:layout_constraintStart_toStartOf="@+id/gasCard"
+                            app:layout_constraintTop_toTopOf="@+id/guideline"
+                            app:srcCompat="@drawable/ic_user" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Driver Profile"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/dieselCard"
+                    android:layout_width="130dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/fuelCard"
+                    app:layout_constraintHorizontal_bias="0.15"
+                    app:layout_constraintStart_toStartOf="@+id/fuelCard"
+                    app:layout_constraintTop_toBottomOf="@id/fuelCard" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/carRepairCard"
+                    android:layout_width="130dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/gasCard"
+                    app:layout_constraintTop_toBottomOf="@+id/gasCard" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="20dp" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="3dp"
+                    android:text="Towing Van"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/ivTowingVan"
+                    app:layout_constraintStart_toStartOf="@+id/ivTowingVan"
+                    app:layout_constraintTop_toBottomOf="@+id/ivTowingVan" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="169dp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp"
+                    android:text="Car Repair"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/ivCarRepair"
+                    app:layout_constraintStart_toStartOf="@+id/ivCarRepair"
+                    app:layout_constraintTop_toBottomOf="@+id/ivCarRepair" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp"
+                    android:text="Car Parts"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/ivCarParts"
+                    app:layout_constraintStart_toStartOf="@+id/ivCarParts"
+                    app:layout_constraintTop_toBottomOf="@+id/ivCarParts" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchCompat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clMainLayout" />
+
+            <TextView
+                android:id="@+id/tvOnlineStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Offline"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/switchCompat"
+                app:layout_constraintEnd_toStartOf="@+id/switchCompat"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/switchCompat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

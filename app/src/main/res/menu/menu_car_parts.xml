@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_cart"
+        android:orderInCategory="100"
+        app:actionLayout="@layout/custom_menu_item_count_layout"
+        android:icon="@drawable/ic_shopping_cart_white_24dp"
+        app:showAsAction="always"
+        android:title="@string/action_cart" />
+
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="99"
+        android:icon="@drawable/ic_search_black_24dp"
+        app:showAsAction="always"
+        android:title="@string/action_search" />
+
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="98"
+        android:icon="@drawable/ic_person_white_24dp"
+        app:showAsAction="always"
+        android:title="@string/action_search" />
+</menu>

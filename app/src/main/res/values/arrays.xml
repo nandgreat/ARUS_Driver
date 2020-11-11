@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="states">
+        <item>Abia State</item>
+        <item>Adamawa State</item>
+        <item>Akwa Ibom State</item>
+        <item>Anambra State</item>
+        <item>Bauchi State</item>
+        <item>Bayelsa State</item>
+        <item>Benue State</item>
+        <item>Borno State</item>
+        <item>Cross River State</item>
+        <item>Delta State</item>
+        <item>Ebonyi State</item>
+        <item>Edo State</item>
+        <item>Ekiti State</item>
+        <item>Enugu State</item>
+        <item>FCT</item>
+        <item>Gombe State</item>
+        <item>Imo State</item>
+        <item>Jigawa State</item>
+        <item>Kaduna State</item>
+        <item>Kano State</item>
+        <item>Katsina State</item>
+        <item>Kebbi State</item>
+        <item>Kogi State</item>
+        <item>Kwara State</item>
+        <item>Lagos State</item>
+        <item>Nasarawa State</item>
+        <item>Niger State</item>
+        <item>Ogun State</item>
+        <item>Ondo State</item>
+        <item>Osun State</item>
+        <item>Oyo State</item>
+        <item>Plateau State</item>
+        <item>Rivers State</item>
+        <item>Sokoto State</item>
+        <item>Taraba State</item>
+        <item>Yobe State</item>
+        <item>Zamfara State</item>
+    </array>
+
+</resources>
